@@ -1,0 +1,50 @@
+	<div id="requestMoreEventInfo" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h3 class="modal-title">Tell Me More!</h3>
+	      </div>
+	      <div class="modal-body">
+			<form name="contactForm" id="contactForm" action="http://www.sainational.org/assets/formInsert.php" method="post">
+				<input type="hidden" name="source" value="requestInfo">
+				<input type="hidden" name="isSet" value="1">				
+				<label>
+					<span>First Name</span>
+					<input type="text" id="firstName" name="firstName" value="" placeholder="First Name">
+				</label>						
+				<label>
+					<span>Last Name</span>
+					<input type="text" id="lastName" name="lastName" value="" placeholder="Last Name">
+				</label>
+				<label>
+					<span>Email</span>
+					<input type="text" id="email" name="email" value="" placeholder="myemail@email.com">
+				</label>
+				<label>
+					<span>Phone</span>
+					<input type="text" id="phone" name="phone" value="" placeholder="123-456-7890">
+				</label>
+				<label id="eventAgreeCheckbox">
+					<span>I'd like to know more about how to win a private lunch with Allen West and Dick Heller</span>
+					<input type="checkbox" name="tellMeMore" value="1" checked> 
+				</label>
+				<div class="submitContainer">
+					<input id="submit" type="submit" name="submit" value="Submit">
+				</div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button 
+		        type="button" 
+		        class="btn btn-default" 
+		        data-dismiss="#requestMoreEventInfo">
+	        	Close
+	        </button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
