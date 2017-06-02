@@ -13,42 +13,58 @@
 </head>
 <body>
 	<?php include 'includes/header.html';?>
-	<div class="container eventsContainer">
-		<div class="row eventsBanner">
-			<div class="col-lg-3">
-				<!---West Photo-->
-			</div>
-			<div class="col-lg-4 eventBannerText">
-				<h3>Liberty Rising with Former Congressman Allen West</h3>
-				<h5>Wednesday April 19th, 2017</h5>
-				<h5>The Heritage Foundation in Washington DC</h5>
-				<button id="getmoreinfoevents"  data-toggle="modal" data-target="#requestMoreEventInfo">Request Additional Information</button>
-			</div>
-			<div class="col-lg-3 eventsBannerImageBox hidden-md hidden-sm hidden-xs">
-				<img id="eventBannerHeller" src="includes/hellerHeadshotcropped.jpg">
-			</div>			
-		</div>
-		<div class="row eventsBody">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-				<p id="devoEventDesc">
-				On Wednesday 4/19, come out to the Heritage Foundation in Washington DC for an evening with former Congressman and author of Guardian of the Republic, Allen West. Topics include: liberty, freedom, and the importance of defending the Constitution. Light refreshments will be served following Allen West's speech.
-				</p>
-
-				<ol>
-				<h4>VIP Meet and Greet Featuring:</h4>
-				<li> Dick Heller</li> 
-				<li> Antonia Okafor</li> 
-				<li>Amanda Collins</li>
-				<li>Nikki Goeser</li>
-				<li>Shaneen Allen</li>
-
-				<span>Hors d'oeuvres will be serverd</span>
-			</div>
-			<div class="col-sm-1"></div>		
-		</div>
+	<div class="container">
+    	<div class="row">
+	    	There are not upcoming events scheduled. Check back for events in the future. 
+    	</div>
+    	<div class="row">
+    		<div class="col-md-6">
+    			<?php
+    				include 'includes/basicSlide.html';
+    			?>
+    		</div>
+    		<div class="col-md-6">
+    			Past 2
+    		</div>    		
+    	</div>
 	</div>	
 	<?php include 'includes/eventsMoreInfoModal.html';?>
 	<?php include 'includes/contactModal.html';?>
 	<?php include 'includes/footer.html';?>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.w3-button').each(function(){
+		$(this).click(function(){
+			var clickVal = $(this).attr('value');
+			showSlide(clickVal);			
+		});
+	})
+
+	function showSlide(inc) {
+		var slideSet = $('.mySlides');
+		// var 
+		// console.log(slideSet);
+		// if (n > slideSet.length) {slideIndex = 1;}
+		// if (n < 1) {slideIndex = slideSet.length;}
+		$.each(slideSet,function(key, value){
+			console.log(inc);
+			if($(this).hasClass('showing')) {
+				$(this).toggle();
+				var newVal = key + Number(inc);
+				if (newVal < slideSet.length) {
+					$(slideSet[newVal]).toggle('showing');	
+				} else {
+					$(slideSet[0]).toggle('showing');
+				}
+				
+				return;
+			}
+		});
+
+	}
+});
+
+
+</script>	
 </body>
+

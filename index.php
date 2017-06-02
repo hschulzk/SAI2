@@ -26,21 +26,21 @@
 				armed to protect their life."</span> 
 				<span id="hellerSign">- Dick Heller</span>
 			</div>
-				<div class="actButtons">
-					<form class="col-md-6 homeBox  payPalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-						<input type="hidden" name="cmd" value="_s-xclick">
-						<input type="hidden" name="hosted_button_id" value="2KACFMTA2UGBU">
-						<button class="donateButton" type="input" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-							Donate
-						</button>
-						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width=".1" height=".1"  style="display: none;">
-						<span class="contactButton" data-toggle="modal" data-target="#contactModal">		Contact
-						</span>	
-					</form>	
-					
-				</div>
+			<div class="col-md-6 actButtons">
+				<form class="col-md-6 homeBox  payPalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="2KACFMTA2UGBU">
+					<button class="donateButton" type="input" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						Donate
+					</button>
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width=".1" height=".1"  style="display: none;">
+				</form>	
+				<button class="contactButton" data-toggle="modal" data-target="#contactModal">
+					Contact
+				</button>						
 			</div>
-			<div class="row">
+			</div>
+		<div class="row">
 			<div class="col-md-6 homeBox joinForm">
 			  	<form name="contactForm" method="post" action="" id="joinTheMovement" class="contactForm homeContactForm">
 			  		<input type="hidden" name="isSet" value="1">
