@@ -141,8 +141,12 @@ form.col-md-6.homeBox.payPalForm {
 }
 @media (min-width: 769px) {
 	.actButtons form {
-		width: 15em;
+		width: 11em;
 		display: inline-block;
+	}
+
+	.actButtons form button {
+		width: 100%;
 	}
 }
 
