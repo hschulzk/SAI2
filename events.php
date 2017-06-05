@@ -10,17 +10,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="includes/logoIcon.ico" />
 	<?php include 'assets/homeInsertForm.php' ?>
-	<style>
-			div.slideShow {
-				margin-bottom: 10em;
-			}		
-	</style>	
+
 </head>
 <body>
 	<?php include 'includes/header.html';?>
 	<div class="container">
     	<div class="row eventsTop">
-	    	There are no upcoming events scheduled. Check back for events in the future. 
+	    	<h2>There are no upcoming events scheduled. Check back for events in the future. </h2>
     	</div>
     	<div class="row">
     		<div class="col-md-6 slideShow">
