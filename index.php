@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php $time = time(); 
-	$styleSheet = "<link rel='stylesheet' type='text/css' href='css/style.css?'.$time.'>'"
+		$styleSheet = "<link rel='stylesheet' type='text/css' href='css/style.css?'.$time.'>'"
 	?>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap.css" rel="stylesheet">

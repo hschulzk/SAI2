@@ -9,22 +9,48 @@
 	<link rel="stylesheet" href="css/style.css?v=12345">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="includes/logoIcon.ico" />
-	<?php include 'assets/homeInsertForm.php' ?>	
+	<?php include 'assets/homeInsertForm.php' ?>
+	<style>
+			div.slideShow {
+				margin-bottom: 10em;
+			}		
+	</style>	
 </head>
 <body>
 	<?php include 'includes/header.html';?>
 	<div class="container">
-    	<div class="row">
-	    	There are not upcoming events scheduled. Check back for events in the future. 
+    	<div class="row eventsTop">
+	    	There are no upcoming events scheduled. Check back for events in the future. 
     	</div>
     	<div class="row">
-    		<div class="col-md-6">
-    			<?php
-    				include 'includes/basicSlide.html';
-    			?>
+    		<div class="col-md-6 slideShow">
+    			<h2 class="slideBoxHeader">Liberty Rising</h2>
+				<div class="slideContainer">
+				  <img class="mySlides showing" width="100%" src="img/libertyrising/libertyrising1.jpg">
+				  <img class="mySlides"  width="100%" src="img/libertyrising/libertyrising2.jpg">
+				  <img class="mySlides"  width="100%" src="img/libertyrising/libertyrising3.jpg">				
+
+				  <button value="-1" class="w3-button w3-display-left">
+				    &#10094;
+				  </button>
+				  <button value="1" class="w3-button w3-display-right">
+				    &#10095;
+				  </button> 
+				</div>
     		</div>
-    		<div class="col-md-6">
-    			Past 2
+    		<div class="col-md-6 slideShow">
+    			<h2 class="slideBoxHeader">Range Shoot with Dick Heller DATES</h2>
+				<div class="slideContainer">
+				  <img class="mySlides showing" width="100%" src="img/RangeShoot/RangeShoot1.jpg">
+				  <img class="mySlides"  width="100%" src="img/RangeShoot/RangeShoot2.jpg">
+				  <img class="mySlides" width="100%" src="img/RangeShoot/RangeShoot3.jpg">
+				  <button value="-1" class="w3-button w3-display-left">
+				    &#10094;
+				  </button>
+				  <button value="1" class="w3-button w3-display-right">
+				    &#10095;
+				  </button> 
+				</div>
     		</div>    		
     	</div>
 	</div>	
@@ -36,16 +62,13 @@ $(document).ready(function(){
 	$('.w3-button').each(function(){
 		$(this).click(function(){
 			var clickVal = $(this).attr('value');
-			showSlide(clickVal);			
+			showSlide($(this),clickVal);			
 		});
 	})
 
-	function showSlide(inc) {
-		var slideSet = $('.mySlides');
-		// var 
-		// console.log(slideSet);
-		// if (n > slideSet.length) {slideIndex = 1;}
-		// if (n < 1) {slideIndex = slideSet.length;}
+	function showSlide($target,inc) {
+		var slideSet = $target.parents('.slideContainer').find('.mySlides');
+		console.log(slideSet);
 		$.each(slideSet,function(key, value){
 			console.log(inc);
 			if($(this).hasClass('showing')) {
@@ -55,12 +78,10 @@ $(document).ready(function(){
 					$(slideSet[newVal]).toggle('showing');	
 				} else {
 					$(slideSet[0]).toggle('showing');
-				}
-				
+				}				
 				return;
 			}
 		});
-
 	}
 });
 

@@ -135,9 +135,15 @@ header {
 	text-shadow:0 0 1px transparent;
 }
 
-.actButtons form {
-	width: 15em;
-	display: inline-block;
+form.col-md-6.homeBox.payPalForm {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+@media (min-width: 769px) {
+	.actButtons form {
+		width: 15em;
+		display: inline-block;
+	}
 }
 
 .imageBox {
@@ -538,3 +544,54 @@ div.row {
    margin-right: 0px;
    margin-left: 0px;
 }
+
+div.slideContainer {
+	position: relative;
+	height: 25em;
+
+}
+
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides.showing {
+    display: block;
+  }
+  div.slideContainer {
+    text-align: center;
+  }
+
+.w3-display-left, .w3-display-right {
+	position: absolute;
+	top: 50%;
+	height: 60px;
+	width: 60px;
+	font-size: 2.5em;
+	background-color: rgba(0,0,0,0.2);
+	border:none;
+	color: white;
+}
+
+
+.eventsTop {
+	font-size: 1.3em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+.w3-display-left:hover, .w3-display-right:hover {
+	box-shadow: 1px 1px 1px gray;
+}
+
+.w3-display-left {
+	left: 0px;
+}
+
+.w3-display-right {
+	right: 0px;
+}
+
+h2.slideBoxHeader {
+	text-align: center;
+}
+
