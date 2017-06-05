@@ -53,35 +53,6 @@
 	<?php include 'includes/eventsMoreInfoModal.html';?>
 	<?php include 'includes/contactModal.html';?>
 	<?php include 'includes/footer.html';?>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('.w3-button').each(function(){
-		$(this).click(function(){
-			var clickVal = $(this).attr('value');
-			showSlide($(this),clickVal);			
-		});
-	})
-
-	function showSlide($target,inc) {
-		var slideSet = $target.parents('.slideContainer').find('.mySlides');
-		console.log(slideSet);
-		$.each(slideSet,function(key, value){
-			console.log(inc);
-			if($(this).hasClass('showing')) {
-				$(this).toggle();
-				var newVal = key + Number(inc);
-				if (newVal < slideSet.length) {
-					$(slideSet[newVal]).toggle('showing');	
-				} else {
-					$(slideSet[0]).toggle('showing');
-				}				
-				return;
-			}
-		});
-	}
-});
-
-
-</script>	
+<script src="js/script.js?v=1"></script>	
 </body>
 
