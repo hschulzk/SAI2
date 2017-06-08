@@ -21,10 +21,6 @@
 			padding: 0em 0em 0em 0em;
 		}
 
-		#mobileMenu {
-			display: none;
-		}
-
 		header {
 			z-index: 14;
 		}
@@ -42,6 +38,15 @@
 			z-index: 1;
 		}
 
+		#belowFold {
+			width: 100%;
+			margin-top: 100vh;			
+		}
+
+		#belowFold .contentSection {
+			padding: 4em 10vw 4em 10vw;
+		}
+
 		@media (max-width: 991px) {
 			#overFold {
 				background-size: cover;
@@ -50,7 +55,10 @@
 
 		#hamburger {
 			float: right;
-			margin-top: 3em;
+			margin-top: .75em;
+			cursor: pointer;
+			color: #FFFFF0;
+			font-size: 50px;
 		}
 
 		#mainLogo {
@@ -60,7 +68,7 @@
 		    width: 9em;
 		    padding: 6px 6px 6px 6px;
 		    z-index: 15;
-		    background-color: rgba(0,0,0,0.75);
+		    background-color: rgba(0,0,0,0.9);
 		}
 
 		#mainLogo img {
@@ -80,7 +88,7 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: rgba(0,0,0,0.35);
+			background-color: rgba(0,0,0,0.4);
 			z-index: 2;
 		}
 		#afDownArrow {
@@ -94,7 +102,7 @@
 		    left: 47vw;
 		    z-index: 71;
 		    font-size: 6vw;
-		    color: rgba(255,255,255,0.9);
+		    color: #FFFFF0;
 		    border-radius: 50%;
 		    margin-bottom: 25px;
 		    font-weight: 100;
@@ -114,22 +122,46 @@
 		#centerTop h2 {
 		    letter-spacing: 3px;
 		    font-size: 3em;
-		    font-weight: 200;
+		    font-weight: 100;
 		    text-shadow: 1px 1px black;
-		    color: white;
-		    width: 70%;
-		    margin: auto;	
+		    line-height: 2em;
+		    color: #FFFFF0;
+		    width: 80vw;
+		    margin: auto;
+		    font-family: sans-serif;	
 		}
 		@media (max-width: 991px) {
 			#centerTop h2 {
-				font-size: 1.75em;
+				font-size: 1.5em;
 			}
-		}	
+		}
+
+		.saiRed {
+			color: #AA3939			
+		}
+
+		#homepage ul#mobileMenu	{
+			z-index: 65;
+			list-style: none;
+			background-color: rgba(0,0,0,0.6);
+			color: white;
+			width: 100%;
+			text-align: center;
+			position: absolute;
+			height: 50vh;
+			top: 50vh;
+			display: none;
+		}
+		#homepage ul#mobileMenu li {
+			color: white;
+			padding: 1em 2em 1em 2em;
+			font-size: 1.5em;
+		}
 	</style>
 	<?php include 'assets/homeInsertForm.php' ?>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid" id="homepage">
 		<?php include 'includes/header.php' ?>
 		<div id="overFold">
 			<div id="centerTop">
@@ -137,17 +169,42 @@
 			</div>
 			<div id="aboveFoldOverlay" class="darkOverlay"></div>
 			<span id="afDownArrow">
-				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+				<i class="fa fa-chevron-down" id="moveDownPage" aria-hidden="true"></i>
 			</span>
+		  	<ul id="mobileMenu">
+		        <a href="index.php"><li>Home</li></a>
+		        <a href="donate.php"><li class="mobileDonate">Donate</li></a>
+		        <a href="events.php"><li>Events</li></a>
+		        <a href="about.php"><li>About</li></a>
+		        <li id="contactModalButton" data-toggle="modal" data-target="#contactModal">Contact</li>
+		        <a href="https://www.s4sd.org/"><li>Students</li></a>
+		    </ul>				
 		</div>
-		<div class="row" style="height: 900px; width: 100%; margin-top: 100vh;">
-			
+		<div class="row" id="belowFold">
+			<div class="col-sm-12 contentSection">
+				<h3>
+					The Second Amendment Institute promotes the advancement and understanding of the second amendment through grassroots education, activation, and empowering individual citizens to exercise their rights. 
+				</h3>
+				<p>
+					Currently, SAI is promoting its project of Students for Self-Defense to advance the second amendment with college students. Because self-defense is a basic human right which can be asserted through the second amendment, the Second Amendment Institute promotes sensible self-defense policies on college campuses. Students have a right to self-defense that extends to a variety of tools including pepper spray, tasers, pocket knives, and firearms.		
+				</p>				
+			</div>
+			<h2></h2>
 		</div>
 	</div>
 	<?php include 'includes/contactModal.html';?>
 	<?php include 'includes/footer.html';?>
 </body>
 
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#hamburger').click(function(event) {
+			$('#moveDownPage').toggle();
+		});		
+	});
+
+</script>
 <!--
 	<?php 
 		//$time = time(); 
@@ -156,13 +213,6 @@
 
 -->
 
-
-<!-- 			<div class="col-md-6 homeBox dickQuote">
-				<span id="topOfQuote">"In a truly free society</span> 
-				<span id="middleOfQuote">citizens do not need government permission to be 
-				armed to protect their life."</span> 
-				<span id="hellerSign">- Dick Heller</span>
-			</div> -->
 
 
 <!-- 			The Second Amendment Institute promotes the advancement and understanding of the second amendment through grassroots education, activation, and empowerment of individuals. Currently, SAI is promoting its project of Students for Self-Defense to advance the second amendment with college students. Because self-defense is a basic human right which can be asserted through the second amendment, the Second Amendment Institute promotes sensible self-defense policies on college campuses. Students have a right to self-defense that extends to a variety of tools including pepper spray, tasers, pocket knives, and firearms.	 -->
