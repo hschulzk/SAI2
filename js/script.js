@@ -21,13 +21,7 @@ function sendFormData (formID) {
        }
     });
 }
-$( document ).ready(function() {
 
-	$('#hamburger').click(function() {
-		$('#mobileMenu').slideToggle();
-	});
-	// $(".formSuccess").delay(5000).hide('slow');
-});
 
 $(document).ready(function(){
 	$('.w3-button').each(function(){

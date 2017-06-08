@@ -45,6 +45,7 @@
 
 		#belowFold .contentSection {
 			padding: 4em 10vw 4em 10vw;
+			height: 40vh;
 		}
 
 		@media (max-width: 991px) {
@@ -64,11 +65,10 @@
 		#mainLogo {
 		    float: left;
 		    border-radius: 50%;
-		    height: 9em;
-		    width: 9em;
-		    padding: 6px 6px 6px 6px;
+		    height: 15em;
+		    width: 15em;
+		    padding: 1px 1px 1px 1px;
 		    z-index: 15;
-		    background-color: rgba(0,0,0,0.9);
 		}
 
 		#mainLogo img {
@@ -79,7 +79,7 @@
 
 		header {
 			width: 100%;
-			padding: 4em 10vw 4em 10vw;
+			padding: 0em 10vw 0em 10vw;
 		}
 
 		.darkOverlay {
@@ -88,7 +88,7 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			background-color: rgba(0,0,0,0.4);
+			background-color: rgba(0,0,0,0.25);
 			z-index: 2;
 		}
 		#afDownArrow {
@@ -120,7 +120,7 @@
 		    z-index: 35;
 		}
 		#centerTop h2 {
-		    letter-spacing: 3px;
+		    letter-spacing: 3.5px;
 		    font-size: 3em;
 		    font-weight: 100;
 		    text-shadow: 1px 1px black;
@@ -130,16 +130,6 @@
 		    margin: auto;
 		    font-family: sans-serif;	
 		}
-		@media (max-width: 991px) {
-			#centerTop h2 {
-				font-size: 1.5em;
-			}
-		}
-
-		.saiRed {
-			color: #AA3939			
-		}
-
 		#homepage ul#mobileMenu	{
 			z-index: 65;
 			list-style: none;
@@ -148,15 +138,77 @@
 			width: 100%;
 			text-align: center;
 			position: absolute;
-			height: 50vh;
-			top: 50vh;
+			top: 64vh;
 			display: none;
+			-webkit-padding-start: 0px;
 		}
+
+		#homepage ul#mobileMenu a {
+			text-decoration: none;
+		}
+
 		#homepage ul#mobileMenu li {
 			color: white;
-			padding: 1em 2em 1em 2em;
 			font-size: 1.5em;
+			height: 6vh;
+			line-height: 6vh;
 		}
+
+		@media (max-width: 991px) {
+			#centerTop h2 {
+				font-size: 1.5em;
+			}
+
+			#homepage ul#mobileMenu {
+				top: 40vh;
+				background-color: rgba(0,0,0,0.8);
+			}
+
+			#homepage ul#mobileMenu li {
+				height: 10vh;
+				line-height: 10vh;
+
+			}
+		}
+
+		.saiRed {
+			color: #AA3939			
+		}
+
+		header#pageHeader.scrollNav {
+			position: fixed;
+			top: 0;
+			height: 8em;
+			background-color: #AA3939;
+			padding: 0em 10vw 0em 10vw;
+		}
+
+		header#pageHeader.scrollNav #mainLogo {
+		    height: 6em;
+		    width: 6em;
+		    margin-top: 1em;			
+		}
+
+		#homepage ul#mobileMenu.scrollNav {
+			position: fixed;
+			top: 8em;
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		#homepage ul#mobileMenu.scrollNav a li:hover span, 
+		#homepage ul#mobileMenu.scrollNav li:hover span
+		{
+			border-bottom: 1px solid white;
+			padding-bottom: .25em;
+			cursor: pointer;
+		}
+
+		footer {
+			background-color: #5a5753;
+			height: 5em;
+			color: #FFFFF0; 
+		}
+
 	</style>
 	<?php include 'assets/homeInsertForm.php' ?>
 </head>
@@ -172,12 +224,12 @@
 				<i class="fa fa-chevron-down" id="moveDownPage" aria-hidden="true"></i>
 			</span>
 		  	<ul id="mobileMenu">
-		        <a href="index.php"><li>Home</li></a>
-		        <a href="donate.php"><li class="mobileDonate">Donate</li></a>
-		        <a href="events.php"><li>Events</li></a>
-		        <a href="about.php"><li>About</li></a>
-		        <li id="contactModalButton" data-toggle="modal" data-target="#contactModal">Contact</li>
-		        <a href="https://www.s4sd.org/"><li>Students</li></a>
+		        <a href="index.php"><li><span>Home</span></li></a>
+		        <a href="donate.php"><li class="mobileDonate"><span>Donate</span></li></a>
+		        <a href="events.php"><li><span>Events</span></li></a>
+		        <a href="about.php"><li><span>About</span></li></a>
+		        <li id="contactModalButton" data-toggle="modal" data-target="#contactModal"><span>Contact</span></li>
+		        <a href="http://www.s4sd.org/" target="blank"><li><span>Students</span></li></a>
 		    </ul>				
 		</div>
 		<div class="row" id="belowFold">
@@ -185,11 +237,39 @@
 				<h3>
 					The Second Amendment Institute promotes the advancement and understanding of the second amendment through grassroots education, activation, and empowering individual citizens to exercise their rights. 
 				</h3>
+				
+			</div>
+			<div class="col-sm-12 contentSection">
+				<form name="contactForm" method="post" action="" id="joinTheMovement" class="contactForm homeContactForm">
+			  		<input type="hidden" name="isSet" value="1">
+			  		<h3>Join the Movement!</h3>
+			  		<label>
+			  			<span>First Name</span>
+			  			<input type="text" id="firstName" name="firstName" value="">
+			  		</label>
+			  		<label>
+			  			<span>Last Name</span>
+			  			<input type="text" id="lastName" name="lastName" value="">
+			  		</label>			  		
+			  		<label>
+			  			<span>Email</span>
+			  			<input type="text" id="email" name="email" value="">		  			
+			  		</label>
+
+			  		<label>
+			  			<span>Phone</span>
+			  			<input type="phone" id="phone" name="phone" value="">
+			  		</label>
+			  		<div class="row formButtonRow">
+			  			<input type="submit" name="submit" class="formSubmitButton" value="Submit">
+			  		</div>
+			  	</form> 
+			</div>
+			<div class="col-sm-12 contentSection">
 				<p>
 					Currently, SAI is promoting its project of Students for Self-Defense to advance the second amendment with college students. Because self-defense is a basic human right which can be asserted through the second amendment, the Second Amendment Institute promotes sensible self-defense policies on college campuses. Students have a right to self-defense that extends to a variety of tools including pepper spray, tasers, pocket knives, and firearms.		
-				</p>				
+				</p>
 			</div>
-			<h2></h2>
 		</div>
 	</div>
 	<?php include 'includes/contactModal.html';?>
@@ -201,7 +281,28 @@
 	$(document).ready(function() {
 		$('#hamburger').click(function(event) {
 			$('#moveDownPage').toggle();
-		});		
+		});
+	});
+	$(document).ready(function(){
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > $('#overFold').height()) {
+				$('#pageHeader').addClass("scrollNav");
+				$('#mobileMenu').addClass("scrollNav");
+
+			} else {
+				$('#pageHeader').removeClass("scrollNav");			
+				$('#mobileMenu').removeClass("scrollNav");
+			}
+		});	
+	});
+
+
+	$( document ).ready(function() {
+
+		$('#hamburger').click(function() {
+			$('#mobileMenu').slideToggle();
+		});
+	// $(".formSuccess").delay(5000).hide('slow');
 	});
 
 </script>
@@ -235,7 +336,8 @@
  -->
 
 
-<!-- 			  	<form name="contactForm" method="post" action="" id="joinTheMovement" class="contactForm homeContactForm">
+<!-- 			  	
+				<form name="contactForm" method="post" action="" id="joinTheMovement" class="contactForm homeContactForm">
 			  		<input type="hidden" name="isSet" value="1">
 			  		<h3>Join the Movement!</h3>
 			  		<label>
@@ -258,4 +360,6 @@
 			  		<div class="row formButtonRow">
 			  			<input type="submit" name="submit" class="formSubmitButton" value="Submit">
 			  		</div>
-			  	</form> -->
+			  	</form> 
+
+			  	-->
