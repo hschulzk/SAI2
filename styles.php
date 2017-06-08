@@ -3,20 +3,25 @@
 			position: absolute;
 			top: 0px;
 			z-index: 14;
+			width: 100%;
 		}
 
 		.container-fluid {
 			padding: 0em 0em 0em 0em;
 		}
 
-		header {
-			width: 100%;
-			padding: 0em 10vw 0em 10vw;
+		ul#mobileMenu {
+			z-index: 99;
+			list-style: none;
+		}
+
+		.graySection {
+			background-color: rgba(0,0,0,0.1);
 		}
 
 		#hamburger {
 			float: right;
-			margin-top: .5em;
+			margin-top: .25em;
 			cursor: pointer;
 			color: #FFFFF0;
 			font-size: 50px;
@@ -24,43 +29,25 @@
 		}
 
 		#mainLogo {
-		    height: 14em;
-		    width: 14em;
 		    z-index: 15;
 		    margin: auto;
-		    margin-top: 1em;
 		}
+		
 		#mainLogo img {
 			height: 100%;
 			width: 100%;
 			z-index: 18;
 		}
 
-		ul#mobileMenu {
-			list-style: none;
-			width: 80vw;
-			margin-top: 1em;
-		}
-		
-		ul#mobileMenu a {
-			text-decoration: none;
-		}
-
-		ul#mobileMenu li {
-			color: white;
-			font-size: 1.5em;
-			height: 6vh;
-			line-height: 6vh;
-			width: 16.6%;
-			float: left;
-			text-align: center;
-		}
-
 		header#pageHeader.scrollNav {
 			position: fixed;
-			top: 0;
+			top: 0px;
 			background-color: #AA3939;
 			padding: 1em 10vw 1em 10vw;
+		}
+
+		header#pageHeader.scrollNav #mobileMenu {
+			position: initial;
 		}
 
 		header#pageHeader.scrollNav #mainLogo {
@@ -70,36 +57,9 @@
 		    margin-top: 0px;			
 		}
 
-		header#pageHeader.scrollNav ul#mobileMenu {
-			float: right;
-			width: 80%;
-			margin-bottom: 0px;
-		}
 
 		#homepage header.scrollNav 	#hamburger {
 			margin-top: .25em;
-		}
-
-		#homepage ul#mobileMenu.scrollNav a li:hover span, 
-		#homepage ul#mobileMenu.scrollNav li:hover span
-		{
-			border-bottom: 1px solid white;
-			padding-bottom: .25em;
-			cursor: pointer;
-		}
-
-		@media(max-width: 991px) {
-			header#pageHeader	#hamburger {
-				display: block;
-			}
-			header#pageHeader ul#mobileMenu	{
-				display: none;
-			}
-			header#pageHeader #mainLogo {
-				float: left;
-				height: 6em;
-				width: 6em;
-			}
 		}
 
 		#overFold {
@@ -123,14 +83,10 @@
 		#belowFold .contentSection {
 			padding: 5em 10vw 4em 10vw;
 			text-align: justify;
+			margin-left: 0px;
+			margin-right: 0px;
+			border-bottom: 2px solid rgba(0,0,0,0.1);
 
-		}
-
-		@media (max-width: 991px) {
-			#belowFold .contentSection {
-				padding: 1em 1em 1em 1em;
-				text-align: left;
-			}			
 		}
 
 		#belowFold .contentSection  p {
@@ -139,7 +95,9 @@
 			font-size: 1.5em;			
 		}
 
-		#homepage #belowFold .contentSection h2,#homepage  #belowFold .contentSection h4 {
+		#homepage #belowFold .contentSection h2,
+		#homepage  #belowFold .contentSection h4,
+		#homepage  #belowFold .contentSection h1 {
 			text-align: center;
 		}
 
@@ -178,15 +136,15 @@
 
 		#centerTop {
 			position: absolute;
-		    top: 40%;
+		    top: 50%;
 		    width: 100%;
 		    text-align: center;
 		    z-index: 35;
 		}
 
 		#centerTop h2 {
-		    letter-spacing: 3.5px;
-		    font-size: 3em;
+		    letter-spacing: 3px;
+		    font-size: 2.5em;
 		    font-weight: 100;
 		    text-shadow: 1px 1px black;
 		    line-height: 2em;
@@ -195,16 +153,96 @@
 		    margin: auto;
 		    font-family: sans-serif;	
 		}
+		@media (min-width: 992px) {
+			#belowFold .contentSection {
+				padding-top: 10em;
+				padding-bottom: 20em;
+			}
 
-
-		@media (max-width: 991px) {
 			#centerTop h2 {
+				text-align: justify;
+			}
+
+			#centerTop h2 em {
+				color: #E18642;
+			}
+
+
+			#mainLogo {
+				margin-top: 10em;
+			    height: 15em;
+			    width: 15em;				
+			}
+
+			ul#mobileMenu {
+				display: flex;
+				justify-content: space-between;
+				width: 80vw;
+				margin: auto;
+				position: absolute;
+				left: 10vw;
+				top: 0px;
 				font-size: 1.5em;
 			}
 
-			#centerTop {
-				top: 20%;
+			header.scrollNav ul#mobileMenu {
+				float: right;
+				margin-top: .1em;
+				width: 75%;
+				margin-bottom: 0px;
+				
 			}
+			 ul#mobileMenu  li {
+			 	color: white;
+			 	padding: 1em 0em .25em 0em;
+			 	letter-spacing: 2px;
+			 }
+			 #mobileMenu a:hover {
+			 	text-decoration: none;			 	
+			 }
+			 #mobileMenu a:hover li, #mobileMenu li:hover {
+			 	border-bottom: 1px solid white;
+			 	color: #2E882E;
+			 	cursor: pointer;
+			 }
+		}
+
+		@media (max-width: 991px) {
+			#centerTop h2 {
+				font-size: 1.25em;
+			}
+
+			#centerTop {
+				top: 30%;
+			}
+
+			header#pageHeader {
+				padding: 1em 2em 1em 2em;
+			}
+			header#pageHeader	#hamburger {
+				display: block;
+			}
+			header#pageHeader #mainLogo {
+				float: left;
+				height: 6em;
+				width: 6em;
+			}
+
+			header#pageHeader #mobileMenu {
+				display: none;
+				width: 100%;
+				position: absolute;
+				bottom: 0px;
+			}
+
+			div.photoBox {
+				text-align: center;
+			}
+
+			#belowFold .contentSection {
+				padding: 1em 1em 1em 1em;
+				text-align: left;
+			}			
 		}
 
 
@@ -216,10 +254,15 @@
 			padding: 1em 1em 1em 1em; 
 		}
 
-		.backgroundGray {
-			background-color: 
+
+		.contentSection form {
+			color: gray;
 		}
 
+		.contentSection form input, .contentSection form select {
+			height: 2.5em;
+			line-height: 2.5em;
+		}
 		form label {
 			display: block;
 			clear: both;
@@ -228,6 +271,7 @@
 
 		form input, form select {
 			width: 100%;
+			color: gray;
 		}
 		form input[type="submit"] {
 			width: 25%;
