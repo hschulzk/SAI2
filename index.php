@@ -3,19 +3,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php $time = time(); 
-		$styleSheet = "<link rel='stylesheet' type='text/css' href='css/style.css?'.$time.'>'"
+		//$styleSheet = "<link rel='stylesheet' type='text/css' href='css/style.css?'.$time.'>'"
 	?>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	
-	<link rel="stylesheet" href="css/style.css?v=12345">
+	<!-- <link rel="stylesheet" href="css/style.css?v=12345"> -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="includes/logoIcon.ico" />
 	<?php include 'assets/homeInsertForm.php' ?>
 </head>
 <body>
 	<?php include 'includes/header.html';?>
-	<?php echo $styleSheet ?>
+	<!-- <?php //echo $styleSheet ?> -->
 
 	<div class="container">
 
