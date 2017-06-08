@@ -1,13 +1,8 @@
-	<?php 
-		$time = time();
-	?>
 	<header>
-		<div id="headerImageContainer">
-
-			<img id="hamburger" src="img/whiteHamburger2.png">
-			<img id="mainLogo" src="includes/logo.png">
+		<img id="hamburger" src="img/whiteHamburger2.png">
+		<div id="mainLogo">
+			<img src="img/logo3.png">
 		</div>
-
 		<div id="#modalLoader"></div>
 	</header>
   	<ul id="mobileMenu">

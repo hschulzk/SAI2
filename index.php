@@ -4,7 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="https://d58swrsfmwg4x.cloudfront.net/FontAwesome/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 	
 	<!-- <link rel="stylesheet" href="css/style.css?v=12345"> -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -20,6 +21,14 @@
 			padding: 0em 0em 0em 0em;
 		}
 
+		#mobileMenu {
+			display: none;
+		}
+
+		header {
+			z-index: 14;
+		}
+
 		#overFold {
 			height: 100vh;
 			width: 100%;
@@ -30,6 +39,7 @@
 			background-repeat:no-repeat;
 			background-size:cover;
 			background-position:center;
+			z-index: 1;
 		}
 
 		@media (max-width: 991px) {
@@ -38,16 +48,100 @@
 			}
 		}
 
+		#hamburger {
+			float: right;
+			margin-top: 3em;
+		}
+
+		#mainLogo {
+		    float: left;
+		    border-radius: 50%;
+		    height: 9em;
+		    width: 9em;
+		    padding: 6px 6px 6px 6px;
+		    z-index: 15;
+		    background-color: rgba(0,0,0,0.75);
+		}
+
+		#mainLogo img {
+			height: 100%;
+			width: 100%;
+			z-index: 18;
+		}
+
+		header {
+			width: 100%;
+			padding: 4em 10vw 4em 10vw;
+		}
+
+		.darkOverlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.35);
+			z-index: 2;
+		}
+		#afDownArrow {
+			border-radius: 50%;
+		}
+
+
+		#afDownArrow i  {
+			position: absolute;
+		    bottom: 0px;
+		    left: 47vw;
+		    z-index: 71;
+		    font-size: 6vw;
+		    color: rgba(255,255,255,0.9);
+		    border-radius: 50%;
+		    margin-bottom: 25px;
+		    font-weight: 100;
+		}
+
+		#afDownArrow i:hover {
+			color: rgba(0,0,0,0.6);
+			cursor: pointer;
+		}
+		#centerTop {
+			position: absolute;
+		    top: 40%;
+		    width: 100%;
+		    text-align: center;
+		    z-index: 35;
+		}
+		#centerTop h2 {
+		    letter-spacing: 3px;
+		    font-size: 3em;
+		    font-weight: 200;
+		    text-shadow: 1px 1px black;
+		    color: white;
+		    width: 70%;
+		    margin: auto;	
+		}
+		@media (max-width: 991px) {
+			#centerTop h2 {
+				font-size: 1.75em;
+			}
+		}	
 	</style>
 	<?php include 'assets/homeInsertForm.php' ?>
 </head>
 <body>
-	<?php //include 'includes/header.html';?>
-
-
 	<div class="container-fluid">
+		<?php include 'includes/header.php' ?>
 		<div id="overFold">
-			<!-- <img src="img/studentOnCampusC.jpg" width="100%" height="100%"> -->
+			<div id="centerTop">
+				<h2>"In a truly free society, citizens do not need government permission to be armed to protect their life."- Dick Heller</h2>
+			</div>
+			<div id="aboveFoldOverlay" class="darkOverlay"></div>
+			<span id="afDownArrow">
+				<i class="fa fa-chevron-down" aria-hidden="true"></i>
+			</span>
+		</div>
+		<div class="row" style="height: 900px; width: 100%; margin-top: 100vh;">
+			
 		</div>
 	</div>
 	<?php include 'includes/contactModal.html';?>
