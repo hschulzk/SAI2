@@ -3,19 +3,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
 	<title>
 		Second Amendment Institute - Home
 	</title>
 	<?php include 'assets/homeInsertForm.php' ?>
 	<?php include 'includes/header.php';?>
 	<?php include 'styles.php';?>	
-</head>
-<body>
+
 
 	<?php echo generateHeader('scrollNav');?>
 	<div class="container-fluid" id="mainPage">
@@ -43,7 +37,7 @@
 					</p>				
 			</div>
 		</div>
-<!-- 	
+		<!-- 	
 		Waiting on Tyler for staff photos and job titles to plug in here
 		
 		<div class="row contentSection">
@@ -64,12 +58,11 @@
 
 
 
-<?php include 'includes/tylerBio.html';?>
-<?php include 'includes/hellerBio.html';?>
-<?php include 'includes/contactModal.html';?>
-<?php include 'includes/footer.html';?>
-<?php 
-	include 'js/script.php';
-
-?>
-</body>
+	<?php
+		include 'includes/tylerBio.html';
+		include 'includes/hellerBio.html';
+		include 'includes/contactModal.html';
+		include 'includes/contactModal.html';
+		echo generateFooter();
+		include 'js/script.php';
+	;?>

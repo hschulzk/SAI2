@@ -2,7 +2,10 @@
 		function generateHeader($scrollClass) {
 
 
-			$header = "<header id='pageHeader' class='$scrollClass'>
+			$header = "
+			</head>
+			<body>
+				<header id='pageHeader' class='$scrollClass'>
 					<i id='hamburger' class='fa fa-bars' aria-hidden='true'></i>
 					<ul id='mobileMenu'>
 				        <a href='index.php'><li><span>Home</span></li></a>
@@ -35,6 +38,7 @@
 					<script src='js/formValidator.js'></script>
 
 				</footer>
+			</body>
 
 			";
 			return $footer;			

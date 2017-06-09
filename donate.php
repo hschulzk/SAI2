@@ -11,8 +11,6 @@
 	</title>
 	<?php include 'assets/homeInsertForm.php'; ?>	
 	<?php include 'includes/header.php'; ?>
-</head>
-<body>	
 	<?php echo generateHeader('scrollNav');?>
 	<div class="container-fluid" id="mainPage">
 		<div class="row contentSection">
@@ -55,10 +53,8 @@
 			</div>
 		</div>
 	</div>
-<?php include 'includes/footer.html';?>	
-
-<?php 
-	include 'js/script.php';
-
-?>
-</body>
+	<?php
+		include 'includes/contactModal.html';
+		echo generateFooter();
+		include 'js/script.php';
+	?>

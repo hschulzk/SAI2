@@ -110,11 +110,7 @@
 	<?php
 		include 'includes/contactModal.html';
 		echo generateFooter();
-	;?>
-</body>
-<?php 
-	include 'js/script.php';
-
-?>
+		include 'js/script.php';
+	?>
 
 

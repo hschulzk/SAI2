@@ -426,5 +426,7 @@
 		}
 		.graySection {
 			background-color: rgba(0,0,0,0.03);
-		}				
+		}
+
+		span.formValidationError {display: block; color:red;}				
 	</style>
