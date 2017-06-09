@@ -12,11 +12,13 @@
 	<link rel="shortcut icon" type="image/x-icon" href="includes/logoIcon.ico" />
 	<link rel='stylesheet' type='text/css' href='css/style.css?'>
 	<?php include 'styles.php' ?>
+	<?php include 'includes/header.php' ?>
 	<?php include 'assets/homeInsertForm.php' ?>
 </head>
 <body>
+	<?php echo generateHeader('');?>
 	<div class="container-fluid" id="homepage">
-		<?php include 'includes/header.php' ?>
+		
 		<div id="overFold">
 			<div id="centerTop">
 				<h2>"In a <em>truly</em> free society, citizens do not need government permission to be armed to protect their life."- Dick Heller</h2>
@@ -28,10 +30,10 @@
 				
 		</div>
 		<div id="belowFold">
-			<div class="row contentSection">
+			<div class="row contentSection" id="aboutSection">
 				<div class="col-sm-12">
 					<h1>We Stand for Self Defense</h1>
-					<p>
+					<p class="centeredContent">
 						The Second Amendment Institute promotes the advancement and understanding of the second amendment through grassroots education, activation, and empowering individual citizens to exercise their rights. 
 					</p>
 					<h4><a href="">Learn More</a></h4>
@@ -39,7 +41,21 @@
 			</div>
 			<div class="row contentSection graySection">
 			<div class="col-sm-12">
-				Donate Section
+				<h1 class="em4">
+				We need your help to defend our rights. 
+				</h1>
+				<br>
+				<h2 class="alignLeft">
+				See how <em class="">you</em> can help our work continue.
+				</h2>
+				<br>
+
+				<br>
+				<h3>
+					<button class="buttonSizing SAIgreenBG">
+						Learn More
+					</button>
+				</h3>
 			</div>
 			</div>
 			<div class="row contentSection">
@@ -60,8 +76,8 @@
 			
 			</div>
 			<div class="row contentSection graySection">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4">
 					<form 
 						name="contactForm" 
 						method="post" 
@@ -88,8 +104,8 @@
 				  			<span>Phone</span>
 				  			<input type="phone" id="phone" name="phone" value="">
 				  		</label>
-				  		<div class="row formButtonRow">
-				  			<input style="background-color: #226666; border: none; color: white;" type="submit" name="submit" class="formSubmitButton" value="Submit">
+				  		<div class="row alignCenter">
+				  			<input style="background-color: #226666;" type="submit" name="submit" class="buttonSizing alignCenter" value="Submit">
 				  		</div>
 				  	</form>
 			  	</div>
@@ -109,7 +125,7 @@
 	});
 	$(document).ready(function(){
 		$(window).scroll(function () {
-			if ($(window).scrollTop() > $('#overFold').height()) {
+			if ($(window).scrollTop() > $('#overFold').height() - 1) {
 				$('#pageHeader').addClass("scrollNav");
 			} else {
 				$('#pageHeader').removeClass("scrollNav");			
@@ -124,6 +140,14 @@
 			$('#mobileMenu').slideToggle();
 		});
 	// $(".formSuccess").delay(5000).hide('slow');
+	
+		$("#moveDownPage").click(function(event) {
+			event.preventDefault();
+		    $('html, body').animate({
+		        scrollTop: $('#belowFold #aboutSection').offset().top
+		    }, 700);
+		});
+
 	});
 
 </script>

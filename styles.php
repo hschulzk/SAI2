@@ -10,13 +10,19 @@
 			padding: 0em 0em 0em 0em;
 		}
 
+		.container-fluid#mainPage {
+			margin-top: 8em;
+		}
+
+		.container-fluid .row, .container .row {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+
 		ul#mobileMenu {
 			z-index: 99;
 			list-style: none;
-		}
-
-		.graySection {
-			background-color: rgba(0,0,0,0.1);
 		}
 
 		#hamburger {
@@ -80,8 +86,7 @@
 			margin-top: 100vh;			
 		}
 
-		#belowFold .contentSection {
-			padding: 5em 10vw 4em 10vw;
+		#belowFold .contentSection, #mainPage .contentSection {
 			text-align: justify;
 			margin-left: 0px;
 			margin-right: 0px;
@@ -89,15 +94,20 @@
 
 		}
 
-		#belowFold .contentSection  p {
+		#belowFold .contentSection  p, , #mainPage .contentSection p {
 			letter-spacing: 1px;
 			line-height: 2em;
 			font-size: 1.5em;			
 		}
 
-		#homepage #belowFold .contentSection h2,
-		#homepage  #belowFold .contentSection h4,
-		#homepage  #belowFold .contentSection h1 {
+		
+
+		.contentSection h1,
+		.contentSection h2,
+		.contentSection h3,
+		.contentSection h4,
+		.contentSection h5
+		 {
 			text-align: center;
 		}
 
@@ -153,20 +163,21 @@
 		    margin: auto;
 		    font-family: sans-serif;	
 		}
+
+		#centerTop h2 em {
+			color: #E18642;
+		}
 		@media (min-width: 992px) {
-			#belowFold .contentSection {
-				padding-top: 10em;
-				padding-bottom: 20em;
+			#belowFold .contentSection, #mainPage .contentSection {
+				padding-top: 16em;
+				padding-bottom: 16em;
+				padding-right: 10vw;
+				padding-left: 10vw;
 			}
 
 			#centerTop h2 {
-				text-align: justify;
+				text-align: center;
 			}
-
-			#centerTop h2 em {
-				color: #E18642;
-			}
-
 
 			#mainLogo {
 				margin-top: 10em;
@@ -183,6 +194,10 @@
 				left: 10vw;
 				top: 0px;
 				font-size: 1.5em;
+			}
+
+			.centeredContent {
+				text-align: center;
 			}
 
 			header.scrollNav ul#mobileMenu {
@@ -204,6 +219,9 @@
 			 	border-bottom: 1px solid white;
 			 	color: #2E882E;
 			 	cursor: pointer;
+			 }
+			 .scrollNav #mobileMenu a:hover li,.scrollNav #mobileMenu li:hover {
+			 	color: white;
 			 }
 		}
 
@@ -239,7 +257,8 @@
 				text-align: center;
 			}
 
-			#belowFold .contentSection {
+			#belowFold .contentSection,
+			#mainPage .contentSection {
 				padding: 1em 1em 1em 1em;
 				text-align: left;
 			}			
@@ -259,14 +278,16 @@
 			color: gray;
 		}
 
-		.contentSection form input, .contentSection form select {
+		.contentSection form label input, .contentSection form select {
 			height: 2.5em;
 			line-height: 2.5em;
+			border:none;
 		}
 		form label {
 			display: block;
 			clear: both;
 			width: 100%;
+			font-size: 22px;
 		}
 
 		form input, form select {
@@ -274,8 +295,12 @@
 			color: gray;
 		}
 		form input[type="submit"] {
-			width: 25%;
-			margin: auto;
+			max-width: 40%;
+		}
+		@media (max-width: 767px) {
+			form input[type="submit"] {
+				max-width: 60%;
+			}			
 		}
 
 		form .formButtonRow {
@@ -289,5 +314,66 @@
 			border-radius: 0px;
 			background-color: rgba(255,255,255,0.9);
 		}
+		.em1 {
+			font-size: 1em;
+		}
 
+		.em2 {
+			font-size: 2em;
+		}
+
+		.em3 {
+			font-size: 3em;
+		}
+
+		.em4 {
+			font-size: 4em;
+		}
+
+		.em5 {
+			font-size: 5em;
+		}
+
+		.alignLeft {
+			text-align: left;
+		}	
+
+		.alignRight {
+			text-align: right;
+		}
+
+		.alignCenter {
+			text-align: center;
+		}
+
+		.fltLft {
+			float: left;
+		}
+
+		.fltRt {
+			float: right;
+		}
+		.SAIgreenColor {
+			color: #2E882E;
+		}
+		.SAIgreenBG {
+			background-color: #2E882E;
+		}
+
+		.santorumColor {
+			color: #AA6C39;
+		}
+		.santorumBG {
+			background-color: #AA6C39;
+		}
+
+		button.buttonSizing, input.buttonSizing {
+			padding: 1em 4em 1em 4em;
+			color: white;
+			border: none;
+
+		}
+		.graySection {
+			background-color: rgba(0,0,0,0.03);
+		}				
 	</style>
