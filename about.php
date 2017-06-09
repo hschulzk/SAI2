@@ -60,5 +60,5 @@
 		include 'includes/hellerBio.html';
 		include 'includes/contactModal.html';
 		include 'includes/contactModal.html';
-		echo generateFooter();
+		include 'includes/footer.html';
 	;?>

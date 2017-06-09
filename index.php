@@ -108,7 +108,7 @@
 	</div>
 	<?php
 		include 'includes/contactModal.html';
-		echo generateFooter();
+		include 'includes/footer.html';
 	?>
 	<script>
 		$(document).ready(function(){
