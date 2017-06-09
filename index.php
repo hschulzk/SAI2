@@ -2,18 +2,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://d58swrsfmwg4x.cloudfront.net/FontAwesome/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-	
-	<!-- <link rel="stylesheet" href="css/style.css?v=12345"> -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="shortcut icon" type="image/x-icon" href="includes/logoIcon.ico" />
-	<link rel='stylesheet' type='text/css' href='css/style.css?'>
-	<?php include 'styles.php' ?>
-	<?php include 'includes/header.php' ?>
-	<?php include 'assets/homeInsertForm.php' ?>
+	<?php 
+		include 'includes/header.php';
+		include 'styles.php';	
+		include 'assets/homeInsertForm.php';
+	?>
 </head>
 <body>
 	<?php echo generateHeader('');?>
@@ -36,7 +29,7 @@
 					<p class="centeredContent">
 						The Second Amendment Institute promotes the advancement and understanding of the second amendment through grassroots education, activation, and empowering individual citizens to exercise their rights. 
 					</p>
-					<h4><a href="">Learn More</a></h4>
+					<h4><a href="about.php">Learn More</a></h4>
 				</div>				
 			</div>
 			<div class="row contentSection graySection">
@@ -52,9 +45,11 @@
 
 				<br>
 				<h3>
-					<button class="buttonSizing SAIgreenBG">
-						Learn More
-					</button>
+					<a href="donate.php">
+						<button class="buttonSizing SAIgreenBG">
+							Learn More
+						</button>
+					</a>
 				</h3>
 			</div>
 			</div>
@@ -112,50 +107,14 @@
 			</div>			
 		</div>
 	</div>
-	<?php include 'includes/contactModal.html';?>
-	<?php include 'includes/footer.html';?>
+	<?php
+		include 'includes/contactModal.html';
+		echo generateFooter();
+	;?>
 </body>
+<?php 
+	include 'js/script.php';
 
+?>
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#hamburger').click(function(event) {
-			$('#moveDownPage').toggle();
-		});
-	});
-	$(document).ready(function(){
-		$(window).scroll(function () {
-			if ($(window).scrollTop() > $('#overFold').height() - 1) {
-				$('#pageHeader').addClass("scrollNav");
-			} else {
-				$('#pageHeader').removeClass("scrollNav");			
-			}
-		});	
-	});
-
-
-	$( document ).ready(function() {
-
-		$('#hamburger').click(function() {
-			$('#mobileMenu').slideToggle();
-		});
-	// $(".formSuccess").delay(5000).hide('slow');
-	
-		$("#moveDownPage").click(function(event) {
-			event.preventDefault();
-		    $('html, body').animate({
-		        scrollTop: $('#belowFold #aboutSection').offset().top
-		    }, 700);
-		});
-
-	});
-
-</script>
-<!--
-	<?php 
-		//$time = time(); 
-		//$styleSheet = "<link rel='stylesheet' type='text/css' href='css/style.css?'.$time.'>'";
-	?>
-
--->
 

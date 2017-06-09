@@ -5,40 +5,41 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" data-target="#contactModal">&times;</button>
-		        <h3 class="modal-title">Contact Us</h3>
+		       
 		      </div>
 		      <div class="modal-body">
 					<form name="contactForm" id="contactForm" action="" method="post">
+					 	<h3 class="modal-title">Contact Us</h3>
 						<input type="hidden" name="source" value="joinTheMovement">
 						<input type="hidden" name="isSet" value="1">
 						
 						<label>
 							<span>First Name</span>
-							<input type="text" id="firstName" name="firstName" value="" placeholder="First Name">
+							<input type="text" id="firstName" name="firstName" value="" placeholder="">
 						</label>						
 						<label>
 							<span>Last Name</span>
-							<input type="text" id="lastName" name="lastName" value="" placeholder="Last Name">
+							<input type="text" id="lastName" name="lastName" value="" placeholder="">
 						</label>
 						<label>
 							<span>Email</span>
-							<input type="text" id="email" name="email" value="" placeholder="myemail@email.com">
+							<input type="text" id="email" name="email" value="" placeholder="">
 						</label>
 						<label>
 							<span>Phone</span>
-							<input type="text" id="phone" name="phone" value="" placeholder="123-456-7890">
+							<input type="text" id="phone" name="phone" value="" placeholder="">
 						</label>
 						<label>
 							<span>Message</span>
-							<textarea id="message" name="message" placeholder="Your message goes here"></textarea> 
+							<textarea id="message" name="message" placeholder=""></textarea> 
 						</label>
 						<div class="submitContainer">
-							<input id="submit" type="submit" name="submit" value="Submit">
+							<input id="submit" type="submit" name="submit" class="buttonSizing saiGreenBG" value="Submit">
 						</div>
 					</form>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#contactModal">Close</button>
+		        <button style="color: black;" type="button" class="btn btn-default  buttonSizing " data-dismiss="modal" data-target="#contactModal">Close</button>
 		      </div>
 		    </div>
 

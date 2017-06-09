@@ -22,5 +22,26 @@
 
 		}
 
-	?>
+		function generateFooter() {
 
+			$footer = "
+				<footer>
+					<h6>
+						The Second Amendment Institute is a non-partisan educational organization approved by the Internal Revenue Service as a public foundation operating under Section 501(c)(3) of the Internal Revenue code. . Contributions to SAI are tax deductible.
+					</h6>
+					<script src='js/jquery-3.1.0.min.js'></script>
+					<script src='js/bootstrap.js'></script>	
+					<script src='js/script.js'></script>
+					<script src='js/formValidator.js'></script>
+
+				</footer>
+
+			";
+			return $footer;			
+		}
+
+	?>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://d58swrsfmwg4x.cloudfront.net/FontAwesome/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="includes/logoIcon.ico" />

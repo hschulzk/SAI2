@@ -86,15 +86,17 @@
 			margin-top: 100vh;			
 		}
 
-		#belowFold .contentSection, #mainPage .contentSection {
+		div.contentSection {
 			text-align: justify;
 			margin-left: 0px;
-			margin-right: 0px;
+			margin-right: 0px;			
+		}
+		#belowFold .contentSection {
 			border-bottom: 2px solid rgba(0,0,0,0.1);
-
 		}
 
-		#belowFold .contentSection  p, , #mainPage .contentSection p {
+
+		#belowFold .contentSection  p, #mainPage .contentSection p {
 			letter-spacing: 1px;
 			line-height: 2em;
 			font-size: 1.5em;			
@@ -167,10 +169,20 @@
 		#centerTop h2 em {
 			color: #E18642;
 		}
+
+		#mainPage {
+			min-height: 100vh;
+		}
 		@media (min-width: 992px) {
-			#belowFold .contentSection, #mainPage .contentSection {
+			#belowFold .contentSection {
 				padding-top: 16em;
-				padding-bottom: 16em;
+				padding-bottom: 16em;	
+			}
+			 #mainPage .contentSection {
+				padding-top: 8em;
+				padding-bottom: 8em;	
+			 }			
+			#belowFold .contentSection, #mainPage .contentSection {
 				padding-right: 10vw;
 				padding-left: 10vw;
 			}
@@ -237,7 +249,7 @@
 			header#pageHeader {
 				padding: 1em 2em 1em 2em;
 			}
-			header#pageHeader	#hamburger {
+			header#pageHeader #hamburger {
 				display: block;
 			}
 			header#pageHeader #mainLogo {
@@ -246,12 +258,27 @@
 				width: 6em;
 			}
 
-			header#pageHeader #mobileMenu {
+			header#pageHeader ul#mobileMenu, header#pageHeader.scrollNav ul#mobileMenu {
 				display: none;
 				width: 100%;
 				position: absolute;
-				bottom: 0px;
+				top: 100%;
+				left: 0px;
+				background-color: rgba(0,0,0,0.75);
+				padding-left: 0px;
 			}
+
+			header#pageHeader ul#mobileMenu li, header#pageHeader.scrollNav ul#mobileMenu li {
+				height: 2em;
+				font-size: 2em;
+				color: #ffffff;
+				text-align: center;
+			}
+
+			ul#mobileMenu li:hover {
+				border: 1px solid rgba(255,255,255,0.5);
+			}
+
 
 			div.photoBox {
 				text-align: center;
@@ -283,6 +310,17 @@
 			line-height: 2.5em;
 			border:none;
 		}
+
+
+		form#contactForm {
+			text-align: center;
+		}
+
+		form#contactForm textarea {
+			width: 100%;
+			height: 15em;
+		}
+
 		form label {
 			display: block;
 			clear: both;
@@ -306,6 +344,13 @@
 		form .formButtonRow {
 			text-align: center;
 		}
+
+		form.payPalForm {
+			text-align: center;
+			margin: auto;
+			float: none;
+		}
+
 		form label span {
 			display: block;
 			clear: both;
@@ -314,6 +359,12 @@
 			border-radius: 0px;
 			background-color: rgba(255,255,255,0.9);
 		}
+
+		.photoBox img {
+			border-radius: 50%;
+			border: .2px solid rgba(0,0,0,0.2);
+		}
+
 		.em1 {
 			font-size: 1em;
 		}
