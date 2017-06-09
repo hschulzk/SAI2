@@ -8,9 +8,6 @@
 	</title>
 	<?php include 'assets/homeInsertForm.php' ?>
 	<?php include 'includes/header.php';?>
-	<?php include 'styles.php';?>	
-
-
 	<?php echo generateHeader('scrollNav');?>
 	<div class="container-fluid" id="mainPage">
 
@@ -64,5 +61,4 @@
 		include 'includes/contactModal.html';
 		include 'includes/contactModal.html';
 		echo generateFooter();
-		include 'js/script.php';
 	;?>

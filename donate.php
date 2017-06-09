@@ -3,9 +3,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<?php include 'styles.php' ?>
 	<title>
 		Second Amendment Institute - Home
 	</title>
@@ -38,7 +35,7 @@
 						The Second Amendment Institute is a registered non-profit organization operating under the IRS code 501(c)3. All donations are tax-deductible		
 					</p>
 				</div>
-				<div class="col-sm-2 photoBox"><img src="img/studentsWithSigns.jpg" width="100%"></div>
+				<div class="col-sm-2 photoBox"><img src="img/LibertyRising/LibertyRising2.jpg" width="100%"></div>
 
 				<div class="col-sm-12">	
 					<form class="payPalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -56,5 +53,4 @@
 	<?php
 		include 'includes/contactModal.html';
 		echo generateFooter();
-		include 'js/script.php';
 	?>

@@ -1,0 +1,431 @@
+
+		header {
+			position: absolute;
+			top: 0px;
+			z-index: 14;
+			width: 100%;
+		}
+
+		.container-fluid {
+			padding: 0em 0em 0em 0em;
+		}
+
+		.container-fluid#mainPage {
+			margin-top: 8em;
+		}
+
+		.container-fluid .row, .container .row {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+
+		ul#mobileMenu {
+			z-index: 99;
+			list-style: none;
+		}
+
+		#hamburger {
+			float: right;
+			margin-top: .25em;
+			cursor: pointer;
+			color: #FFFFF0;
+			font-size: 50px;
+			display: none;
+		}
+
+		#mainLogo {
+		    z-index: 15;
+		    margin: auto;
+		}
+		
+		#mainLogo img {
+			height: 100%;
+			width: 100%;
+			z-index: 18;
+		}
+
+		header#pageHeader.scrollNav {
+			position: fixed;
+			top: 0px;
+			background-color: #AA3939;
+			padding: 1em 10vw 1em 10vw;
+		}
+
+		header#pageHeader.scrollNav #mobileMenu {
+			position: initial;
+		}
+
+		header#pageHeader.scrollNav #mainLogo {
+		    height: 6em;
+		    width: 6em;
+		    float: left;
+		    margin-top: 0px;			
+		}
+
+
+		#homepage header.scrollNav 	#hamburger {
+			margin-top: .25em;
+		}
+
+		#overFold {
+			height: 100vh;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			background-image: url('/img/studentOnCampus.jpeg');
+			background-repeat:no-repeat;
+			background-size:cover;
+			background-position:center;
+			z-index: 1;
+		}
+
+		#belowFold {
+			width: 100%;
+			margin-top: 100vh;			
+		}
+
+		div.contentSection {
+			text-align: justify;
+			margin-left: 0px;
+			margin-right: 0px;			
+		}
+		#belowFold .contentSection {
+			border-bottom: 2px solid rgba(0,0,0,0.1);
+		}
+
+
+		#belowFold .contentSection  p, #mainPage .contentSection p {
+			letter-spacing: 1px;
+			line-height: 2em;
+			font-size: 1.5em;			
+		}
+
+		
+
+		.contentSection h1,
+		.contentSection h2,
+		.contentSection h3,
+		.contentSection h4,
+		.contentSection h5
+		 {
+			text-align: center;
+		}
+
+
+		.darkOverlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,0.65);
+			z-index: 2;
+		}
+
+		#afDownArrow {
+			width: 100%;
+			position: absolute;
+			top: 90vh;
+			text-align: center;
+			height: 5vh;
+			z-index: 65;
+		}
+
+		#afDownArrow i  {
+		    z-index: 71;
+		    font-size: 50px;
+		    color: #FFFFF0;
+		    margin-bottom: 25px;
+		    font-weight: 100;
+		}
+
+		#afDownArrow i:hover {
+			color: rgba(0,0,0,0.6);
+			cursor: pointer;
+		}
+
+		#centerTop {
+			position: absolute;
+		    top: 50%;
+		    width: 100%;
+		    text-align: center;
+		    z-index: 35;
+		}
+
+		#centerTop h2 {
+		    letter-spacing: 3px;
+		    font-size: 2.5em;
+		    font-weight: 100;
+		    text-shadow: 1px 1px black;
+		    line-height: 2em;
+		    color: #FFFFF0;
+		    width: 80vw;
+		    margin: auto;
+		    font-family: sans-serif;	
+		}
+
+		#centerTop h2 em {
+			color: #E18642;
+		}
+
+		#mainPage {
+			min-height: 100vh;
+		}
+		@media (min-width: 992px) {
+			#belowFold .contentSection {
+				padding-top: 16em;
+				padding-bottom: 16em;	
+			}
+			 #mainPage .contentSection {
+				padding-top: 8em;
+				padding-bottom: 8em;	
+			 }			
+			#belowFold .contentSection, #mainPage .contentSection {
+				padding-right: 10vw;
+				padding-left: 10vw;
+			}
+
+			#centerTop h2 {
+				text-align: center;
+			}
+
+			#mainLogo {
+				margin-top: 10em;
+			    height: 15em;
+			    width: 15em;				
+			}
+
+			ul#mobileMenu {
+				display: flex;
+				justify-content: space-between;
+				width: 80vw;
+				margin: auto;
+				position: absolute;
+				left: 10vw;
+				top: 0px;
+				font-size: 1.5em;
+			}
+
+			.centeredContent {
+				text-align: center;
+			}
+
+			header.scrollNav ul#mobileMenu {
+				float: right;
+				margin-top: .1em;
+				width: 75%;
+				margin-bottom: 0px;
+				
+			}
+			 ul#mobileMenu  li {
+			 	color: white;
+			 	padding: 1em 0em .25em 0em;
+			 	letter-spacing: 2px;
+			 }
+			 #mobileMenu a:hover {
+			 	text-decoration: none;			 	
+			 }
+			 #mobileMenu a:hover li, #mobileMenu li:hover {
+			 	border-bottom: 1px solid white;
+			 	color: #2E882E;
+			 	cursor: pointer;
+			 }
+			 .scrollNav #mobileMenu a:hover li,.scrollNav #mobileMenu li:hover {
+			 	color: white;
+			 }
+		}
+
+		@media (max-width: 991px) {
+			#centerTop h2 {
+				font-size: 1.25em;
+			}
+
+			#centerTop {
+				top: 30%;
+			}
+
+			header#pageHeader {
+				padding: 1em 2em 1em 2em;
+			}
+			header#pageHeader #hamburger {
+				display: block;
+			}
+			header#pageHeader #mainLogo {
+				float: left;
+				height: 6em;
+				width: 6em;
+			}
+
+			header#pageHeader ul#mobileMenu, header#pageHeader.scrollNav ul#mobileMenu {
+				display: none;
+				width: 100%;
+				position: absolute;
+				top: 100%;
+				left: 0px;
+				background-color: rgba(0,0,0,0.75);
+				padding-left: 0px;
+			}
+
+			header#pageHeader ul#mobileMenu li, header#pageHeader.scrollNav ul#mobileMenu li {
+				height: 2em;
+				font-size: 2em;
+				color: #ffffff;
+				text-align: center;
+			}
+
+			ul#mobileMenu li:hover {
+				border: 1px solid rgba(255,255,255,0.5);
+			}
+
+
+			div.photoBox {
+				text-align: center;
+			}
+
+			#belowFold .contentSection,
+			#mainPage .contentSection {
+				padding: 1em 1em 1em 1em;
+				text-align: left;
+			}			
+		}
+
+
+		footer {
+			background-color: #5a5753;
+			height: 5em;
+			color: #FFFFF0;
+			text-align: center;
+			padding: 1em 1em 1em 1em; 
+		}
+
+
+		.contentSection form {
+			color: gray;
+		}
+
+		.contentSection form label input, .contentSection form select {
+			height: 2.5em;
+			line-height: 2.5em;
+			border:none;
+		}
+
+
+		form#contactForm {
+			text-align: center;
+		}
+
+		form#contactForm textarea {
+			width: 100%;
+			height: 15em;
+		}
+
+		form label {
+			display: block;
+			clear: both;
+			width: 100%;
+			font-size: 22px;
+		}
+
+		form input, form select {
+			width: 100%;
+			color: gray;
+		}
+		form input[type="submit"] {
+			max-width: 40%;
+		}
+		@media (max-width: 767px) {
+			form input[type="submit"] {
+				max-width: 60%;
+			}			
+		}
+
+		form .formButtonRow {
+			text-align: center;
+		}
+
+		form.payPalForm {
+			text-align: center;
+			margin: auto;
+			float: none;
+		}
+
+		form label span {
+			display: block;
+			clear: both;
+		}
+		div.modal-content {
+			border-radius: 0px;
+			background-color: rgba(255,255,255,0.9);
+		}
+
+		.photoBox img {
+			border-radius: 50%;
+			border: .2px solid rgba(0,0,0,0.2);
+		}
+
+		.em1 {
+			font-size: 1em;
+		}
+
+		.em2 {
+			font-size: 2em;
+		}
+
+		.em3 {
+			font-size: 3em;
+		}
+
+		.em4 {
+			font-size: 4em;
+		}
+
+		.em5 {
+			font-size: 5em;
+		}
+
+		.alignLeft {
+			text-align: left;
+		}	
+
+		.alignRight {
+			text-align: right;
+		}
+
+		.alignCenter {
+			text-align: center;
+		}
+
+		.fltLft {
+			float: left;
+		}
+
+		.fltRt {
+			float: right;
+		}
+		.SAIgreenColor {
+			color: #2E882E;
+		}
+		.SAIgreenBG {
+			background-color: #2E882E;
+		}
+
+		.santorumColor {
+			color: #AA6C39;
+		}
+		.santorumBG {
+			background-color: #AA6C39;
+		}
+
+		button.buttonSizing, input.buttonSizing {
+			padding: 1em 4em 1em 4em;
+			color: white;
+			border: none;
+
+		}
+		.graySection {
+			background-color: rgba(0,0,0,0.03);
+		}
+
+		span.formValidationError {display: block; color:red;}				

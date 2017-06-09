@@ -3,8 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php 
-		include 'includes/header.php';
-		include 'styles.php';	
+		include 'includes/header.php';	
 		include 'assets/homeInsertForm.php';
 	?>
 </head>
@@ -110,7 +109,18 @@
 	<?php
 		include 'includes/contactModal.html';
 		echo generateFooter();
-		include 'js/script.php';
 	?>
+	<script>
+		$(document).ready(function(){
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > $('#overFold').height() - 1) {
+					$('#pageHeader').addClass("scrollNav");
+				} else {
+					$('#pageHeader').removeClass("scrollNav");			
+				}
+			});	
+		});	
+	
+	</script>
 
 

@@ -49,3 +49,4 @@
 	<link href="https://d58swrsfmwg4x.cloudfront.net/FontAwesome/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="includes/logoIcon.ico" />
+	<link rel="stylesheet" href="css/style.css">

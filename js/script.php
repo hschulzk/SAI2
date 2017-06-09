@@ -4,17 +4,7 @@
 			$('#moveDownPage').toggle();
 		});
 	});
-	$(document).ready(function(){
-		$(window).scroll(function () {
-			if ($(window).scrollTop() > $('#overFold').height() - 1) {
-				$('#pageHeader').addClass("scrollNav");
-			} else {
-				$('#pageHeader').removeClass("scrollNav");			
-			}
-		});	
-	});
-
-
+	
 	$( document ).ready(function() {
 	// $(".formSuccess").delay(5000).hide('slow');
 	
@@ -27,8 +17,8 @@
 
 	});
 
-$('#hamburger').click(function() {
-	$('#mobileMenu').slideToggle();
-});
+	$('#hamburger').click(function() {
+		$('#mobileMenu').slideToggle();
+	});
 
 </script>
